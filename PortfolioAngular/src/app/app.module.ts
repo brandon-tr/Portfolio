@@ -15,7 +15,6 @@ import { DashboardComponent } from './blog/dashboard/dashboard.component';
 import { AddPostComponent } from './blog/dashboard/add-post/add-post.component';
 import { DeletePostComponent } from './blog/dashboard/delete-post/delete-post.component';
 import { PostService } from './blog/dashboard/add-post/models/post.service';
-import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { PostsComponent } from './blog/posts/posts.component';
 
 
@@ -38,7 +37,6 @@ import { PostsComponent } from './blog/posts/posts.component';
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    LazyLoadImageModule
   ],
   providers: [BlogService, PostService],
   bootstrap: [AppComponent]
