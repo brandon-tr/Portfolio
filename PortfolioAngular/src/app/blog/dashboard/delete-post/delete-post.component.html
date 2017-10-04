@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2" id="side-menu">
+      <h2>Navigation</h2>
+      <a routerLink="/blog/check/dashboard/add-post">Add Post</a>
+      <a routerLink="/blog/check/dashboard/delete-post">Delete Post</a>      
+    </div>
+    <div class="col-md-10" id="content">
+        <div *ngFor="let post of posts">
+            <h2 class="text-center"><a routerLink="/blog/post/{{post.title}}" target="_blank">{{post.title}}</a> <button (click)="Delete(post._id)">Delete</button></h2> 
+       </div>
+    </div>    
+  </div>
+</div>

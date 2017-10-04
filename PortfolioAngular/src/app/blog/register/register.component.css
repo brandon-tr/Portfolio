@@ -1,0 +1,9 @@
+.container.move {
+    align-self: center;
+    padding-top: 50px;
+    font-size: 200%;
+}
+#registerbutton {
+    padding: 0 20% 0 20%;
+    font-size: 70%;
+}

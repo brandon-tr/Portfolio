@@ -1,0 +1,48 @@
+body{
+    background-color:#666;
+    color:black;
+    font-size: 20px;
+  }
+
+  #Home{
+    background-color: white;
+    padding-top:95px;
+    padding-bottom: 32%;
+  }
+  #fullstack{
+    text-indent: 2%;
+  }
+  #fullstack1{
+    text-indent: 8%;
+  }
+  .large-image{
+    width: 100%;
+    height: 100%;
+  }
+  #projects{
+    color:White;
+    background-color:#3a6073;
+    padding-bottom:100px;
+  }
+  
+  #Contact{
+    background-color: white;
+    padding-bottom: 10%;
+  }
+  button{
+    width:80%;
+  }
+  #last{
+    padding-left: 65px;
+  }
+  #footer{
+    padding-bottom:25px;
+    background-color:#3a6073;
+    color:white;
+    padding-top: 55px;
+  }
+  
+  #footerp{
+    margin-left:39%;
+  }
+  

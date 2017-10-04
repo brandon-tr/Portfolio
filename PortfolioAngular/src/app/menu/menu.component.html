@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="navbar-brand">
+          Brandon Travis
+          </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="">Home</a></li>
+          <li><a routerLink="/blog">Blog</a></li>
+          <li *ngIf="name !== undefined"><a routerLink="/blog/check/dashboard">Welcome {{name}}</a></li>
+        </ul>
+      </div>
+  </nav>

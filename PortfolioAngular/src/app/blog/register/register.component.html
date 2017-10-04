@@ -1,0 +1,50 @@
+<app-menu></app-menu>
+
+<div class="container move">
+ <h2>Register</h2>
+  <form #register="ngForm" (submit)="Register(register)">
+    <label>First Name</label><input type="text" name="firstName"  required minlength="2" [(ngModel)]="registers.first_name" #firstName="ngModel">
+    <div *ngIf="firstName.invalid && (firstName.touched || firstName.dirty)">
+      <p *ngIf="firstName.errors.required" class="alert alert-danger">First name is required</p>
+      <p *ngIf="firstName.errors.minlength" class="alert alert-danger">Minimum length is 2</p>
+    </div>
+    <br>
+    <label>Last Name</label><input type="text" name="lastName"  required minlength="2"   [(ngModel)]="registers.last_name" #lastName="ngModel">
+    <div *ngIf="lastName.invalid && (lastName.touched || lastName.dirty)">
+      <p *ngIf="lastName.errors.required" class="alert alert-danger">Last name is required</p>
+      <p *ngIf="lastName.errors.minlength" class="alert alert-danger">Minimum length is 2</p>
+    </div>
+    <br>
+    <label>Email</label><input type="text" name="email"  required minlength="5"   [(ngModel)]="registers.email" #email="ngModel">
+    <div *ngIf="email.invalid && (email.touched || email.dirty)">
+      <p *ngIf="email.errors.required" class="alert alert-danger">email is required</p>
+      <p *ngIf="email.errors.minlength" class="alert alert-danger">Minimum length is 5</p>
+    </div>
+    <br>
+    <label>Password</label><input type="text" name="password"  required minlength="5"   [(ngModel)]="registers.password" #password="ngModel">
+    <div *ngIf="password.invalid && (password.touched || password.dirty)">
+      <p *ngIf="password.errors.required" class="alert alert-danger">email is required</p>
+      <p *ngIf="password.errors.minlength" class="alert alert-danger">Minimum length is 5</p>
+    </div>
+    <br>
+    <label>Confirm Password</label><input type="text" name="confirm_password"  required minlength="5"   [(ngModel)]="registers.confpassword" validateEqual="password" #confirm_password="ngModel">
+    <div *ngIf="confirm_password.invalid && (confirm_password.touched || confirm_password.dirty)">
+      <p *ngIf="confirm_password.errors.required" class="alert alert-danger"> Confirm Password is required</p>
+      <p *ngIf="!confirm_password.valid && confirm_password.dirty" class="alert alert-danger">Passwords must match</p>
+    </div>
+    <br>
+    <input type="submit" value="Register" class="btn btn-primary"  id="registerbutton">
+  </form>
+  <div *ngIf="check != undefined">
+      <div *ngIf="check.errors != null || check.errors != undefined">
+          <p *ngIf="check.errors.first_name != undefined">{{check.errors.first_name.message}}</p>
+          <p *ngIf="check.errors.last_name != undefined">{{check.errors.last_name.message}}</p>
+          <p *ngIf="check.errors.email != undefined">{{check.errors.email.message}}</p>
+          <p *ngIf="check.errors.password != undefined">{{check.errors.password.message}}</p>
+      </div>
+      <div *ngIf="check.code != undefined">
+        <p>Please use another email</p>
+      </div>
+  </div>
+ 
+</div>

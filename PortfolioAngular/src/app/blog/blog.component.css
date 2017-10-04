@@ -1,0 +1,11 @@
+.container.move {
+    padding-top: 100px;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image {
+    width:68%;
+}
