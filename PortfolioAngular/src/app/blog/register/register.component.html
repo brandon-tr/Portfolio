@@ -15,19 +15,19 @@
       <p *ngIf="lastName.errors.minlength" class="alert alert-danger">Minimum length is 2</p>
     </div>
     <br>
-    <label>Email</label><input type="text" name="email"  required minlength="5"   [(ngModel)]="registers.email" #email="ngModel">
+    <label>Email</label><input type="email" name="email"  required minlength="5"   [(ngModel)]="registers.email" #email="ngModel">
     <div *ngIf="email.invalid && (email.touched || email.dirty)">
       <p *ngIf="email.errors.required" class="alert alert-danger">email is required</p>
       <p *ngIf="email.errors.minlength" class="alert alert-danger">Minimum length is 5</p>
     </div>
     <br>
-    <label>Password</label><input type="text" name="password"  required minlength="5"   [(ngModel)]="registers.password" #password="ngModel">
+    <label>Password</label><input type="password" name="password"  required minlength="5"   [(ngModel)]="registers.password" #password="ngModel">
     <div *ngIf="password.invalid && (password.touched || password.dirty)">
       <p *ngIf="password.errors.required" class="alert alert-danger">email is required</p>
       <p *ngIf="password.errors.minlength" class="alert alert-danger">Minimum length is 5</p>
     </div>
     <br>
-    <label>Confirm Password</label><input type="text" name="confirm_password"  required minlength="5"   [(ngModel)]="registers.confpassword" validateEqual="password" #confirm_password="ngModel">
+    <label>Confirm Password</label><input type="password" name="confirm_password"  required minlength="5"   [(ngModel)]="registers.confpassword" validateEqual="password" #confirm_password="ngModel">
     <div *ngIf="confirm_password.invalid && (confirm_password.touched || confirm_password.dirty)">
       <p *ngIf="confirm_password.errors.required" class="alert alert-danger"> Confirm Password is required</p>
       <p *ngIf="!confirm_password.valid && confirm_password.dirty" class="alert alert-danger">Passwords must match</p>

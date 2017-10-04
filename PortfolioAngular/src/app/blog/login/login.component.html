@@ -2,9 +2,9 @@
 
 <div class="container" (submit)="Login()">
   <form class="text-center" #login="ngForm">
-      <label>Email</label><input type="text" name="email" [(ngModel)]="logins.email" #email="ngModel" required>
+      <label>Email</label><input type="email" name="email" [(ngModel)]="logins.email" #email="ngModel" required>
       <br>
-      <label>Password</label><input type="text" name="password" [(ngModel)]="logins.password" #password="ngModel" required> 
+      <label>Password</label><input type="password" name="password" [(ngModel)]="logins.password" #password="ngModel" required> 
       <br>
       <input type="submit" value="Login" [disabled]="login.invalid">
   </form>
