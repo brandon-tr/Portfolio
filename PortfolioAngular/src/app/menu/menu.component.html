@@ -1,14 +1,24 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
+          <button type="button" 
+            class="navbar-toggle collapsed"
+            (click)="toggleState()">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         <div class="navbar-brand">
           Brandon Travis
           </div>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a routerLink="">Home</a></li>
-          <li><a routerLink="/blog">Blog</a></li>
-          <li *ngIf="name !== undefined"><a routerLink="/blog/check/dashboard">Welcome {{name}}</a></li>
-        </ul>
+        <div class="collapse navbar-collapse" id="myNavbar" [ngClass]="{ 'in': isIn }">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="" class="change">Home</a></li>
+            <li><a routerLink="/blog" class="change">Blog</a></li>
+            <li *ngIf="name !== undefined"><a routerLink="/blog/check/dashboard">Welcome {{name}}</a></li>
+          </ul>
+        </div>
       </div>
   </nav>

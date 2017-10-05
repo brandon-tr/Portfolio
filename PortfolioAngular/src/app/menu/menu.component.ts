@@ -8,6 +8,11 @@ import { BlogService } from '../blog/models/blog.service';
 })
 export class MenuComponent implements OnInit {
   name: string;
+  isIn = false;   // store state
+  toggleState() { // click handler
+      const bool = this.isIn;
+      this.isIn = bool === false ? true : false;
+  }
   constructor(private _blog: BlogService) { }
 
   ngOnInit() {

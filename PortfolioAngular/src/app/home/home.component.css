@@ -8,12 +8,19 @@ body{
     background-color: white;
     padding-top:95px;
     padding-bottom: 32%;
+    
   }
   #fullstack{
     text-indent: 2%;
   }
   #fullstack1{
     text-indent: 8%;
+  }
+  @media only screen and (max-width: 500px) {
+    #fullstack1{
+      text-indent: 8%;
+      font-size: 13px;
+    }
   }
   .large-image{
     width: 100%;
